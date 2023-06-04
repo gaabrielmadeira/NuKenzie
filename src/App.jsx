@@ -1,11 +1,13 @@
-import Form from "./components/form";
+
 import Header from "./components/header";
-import SumValuesSection from "./components/sumValues";
+
 import FinanceResume from "./components/financeResume";
 import { useState } from "react";
 import GlobalReset from "./styles/reset";
 import GlobalStyles from "./styles/globalStyles";
-
+import { StyledResponsive } from "./styles/app";
+import { ContentSection } from "./components/contentSection";
+import { StyledContainer } from "./styles/container";
 
 const App = () => {
   const [valueList, setValueList] = useState([]);
@@ -16,13 +18,15 @@ const App = () => {
       <GlobalReset />
       <Header />
       <main>
-        <Form setValueList={setValueList}/>
-        <SumValuesSection valueList={valueList}/>
-        <FinanceResume valueList={valueList} setValueList={setValueList}/>
+        <StyledContainer>
+          <StyledResponsive >
+            <ContentSection valueList={valueList} setValueList={setValueList} />
+            <FinanceResume valueList={valueList} setValueList={setValueList} />
+          </StyledResponsive>
+        </StyledContainer>
       </main>
     </>
   )
-
 }
 
 export default App;

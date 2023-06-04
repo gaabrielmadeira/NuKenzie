@@ -2,7 +2,6 @@ import { useState } from "react";
 import { StyledInputs, StyledSelect } from "../../styles/form";
 import { StyledLabel, StyledParagraphOne } from "../../styles/typograph";
 import { StyledButtonDefault } from "../../styles/buttons";
-import {StyledContainer} from "../../styles/container";
 import {StyledForm} from "./style.js"
 import { v4 as uuidv4 } from "uuid";
 
@@ -25,7 +24,6 @@ const Form = ({ setValueList }) => {
   }
 
   return (
-    <StyledContainer>
       <StyledForm onSubmit={submit}>
         <StyledLabel htmlFor="description">Descrição</StyledLabel>
         <StyledInputs type="text" id="description" placeholder="Digite aqui a sua descrição" required value={description} onChange={(e) => setDescription((e).target.value)} />
@@ -42,7 +40,6 @@ const Form = ({ setValueList }) => {
 
         <StyledButtonDefault type="submit">Inserir valor</StyledButtonDefault>
       </StyledForm>
-    </StyledContainer>
   )
 }
 

@@ -1,8 +1,7 @@
 import styled from "styled-components"
 
 export const StyledContainer = styled.div`
-  border: 1px solid red;
-  width: 100%;
+  width: auto;
   height: 100%;
   
   display: ${({display}) => {

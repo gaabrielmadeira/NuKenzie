@@ -6,8 +6,8 @@ export const StyledHeader = styled.header`
 
   background: var(--color-grey-1);
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
-`
-export const StyledLogo = styled.img`
-  align-self: center;
-  justify-content: center;
+
+  .HeaderLogo{
+    align-self: center;
+  }
 `

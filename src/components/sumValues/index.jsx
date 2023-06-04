@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Styledh3, StyledParagraphOne, StyledSpanTwo } from "../../styles/typograph";
-import {StyledContainer} from "../../styles/container";
 import {StyledSumSection, StyledTotalValue } from "./style.js";
 
 const SumValuesSection = ({ valueList }) => {
@@ -20,7 +19,6 @@ const SumValuesSection = ({ valueList }) => {
   });
 
   return (
-    <StyledContainer>
       <StyledSumSection >
         <StyledTotalValue>
           <Styledh3>Valor Total:</Styledh3>
@@ -28,7 +26,6 @@ const SumValuesSection = ({ valueList }) => {
         </StyledTotalValue>
         <StyledParagraphOne>O valor se refere ao saldo</StyledParagraphOne>
       </StyledSumSection>
-    </StyledContainer>
   )
 }
 

@@ -1,6 +1,6 @@
 import { Styledh3, StyledSpanOne, StyledParagraphOne } from "../../../styles/typograph";
-import {StyledDeleteButton} from "../../../styles/buttons";
-import {StyledCards} from "./style.js";
+import { StyledDeleteButton } from "../../../styles/buttons";
+import { StyledCards } from "./style.js";
 
 const Cards = ({ value, removeValueCard }) => {
   const formatValue = (value) => {
@@ -12,10 +12,14 @@ const Cards = ({ value, removeValueCard }) => {
 
   return (
     <StyledCards>
-      <Styledh3>{value.description}</Styledh3>
-      <StyledSpanOne>{value.type}</StyledSpanOne>
-      <StyledParagraphOne>{formatValue(Number(value.value))}</StyledParagraphOne>
-      <StyledDeleteButton onClick={() => removeValueCard(value.id)}>Excluir</StyledDeleteButton>
+      <div className="description">
+        <Styledh3>{value.description}</Styledh3>
+        <StyledSpanOne>{value.type}</StyledSpanOne>
+      </div>
+      <div className="value">
+        <StyledParagraphOne>{formatValue(Number(value.value))}</StyledParagraphOne>
+        <StyledDeleteButton onClick={() => removeValueCard(value.id)}>Excluir</StyledDeleteButton>
+      </div>
     </StyledCards>
   );
 }
