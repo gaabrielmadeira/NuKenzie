@@ -30,12 +30,12 @@ const Form = ({ setValueList }) => {
         <StyledParagraphOne fontColor="grey-3">Ex: compra de roupas</StyledParagraphOne>
 
         <StyledLabel htmlFor="value" >Valor(R$)</StyledLabel>
-        <StyledInputs type="number" id="value" required value={value} onChange={(e) => setValue((e).target.value)} />
+        <StyledInputs type="number" id="value" required placeholder="R$ 1.00" value={value} onChange={(e) => setValue((e).target.value)} />
 
         <StyledLabel htmlFor="type">Tipo de valor</StyledLabel>
         <StyledSelect name="type" id="type" value={type} onChange={(e) => setType((e).target.value)}>
           <option value="Entrada">Entrada</option>
-          <option value="Saida">Saida</option>
+          <option value="Despesa">Despesa</option>
         </StyledSelect>
 
         <StyledButtonDefault type="submit">Inserir valor</StyledButtonDefault>

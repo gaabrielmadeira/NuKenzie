@@ -11,7 +11,7 @@ const Cards = ({ value, removeValueCard }) => {
   };
 
   return (
-    <StyledCards>
+    <StyledCards type={value.type}>
       <div className="description">
         <Styledh3>{value.description}</Styledh3>
         <StyledSpanOne>{value.type}</StyledSpanOne>
