@@ -18,7 +18,7 @@ const App = () => {
       <GlobalReset />
       <Header />
       <main>
-        <StyledContainer>
+        <StyledContainer marginTop="top">
           <StyledResponsive >
             <ContentSection valueList={valueList} setValueList={setValueList} />
             <FinanceResume valueList={valueList} setValueList={setValueList} />
