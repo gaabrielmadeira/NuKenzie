@@ -32,7 +32,7 @@ export const StyledCards = styled.li`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.875rem;
+    gap: 1.25rem;
   }
 
   .value{

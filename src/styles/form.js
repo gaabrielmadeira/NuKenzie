@@ -32,3 +32,9 @@ export const StyledSelect = styled.select`
   
   color: var(--color-grey-4);
 `
+
+export const StyledOptions = styled.option`
+  width: 100%;
+  height: 50px;
+  background: var(--color-grey-2);
+`

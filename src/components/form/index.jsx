@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledInputs, StyledSelect } from "../../styles/form";
+import { StyledInputs, StyledSelect, StyledOptions } from "../../styles/form";
 import { StyledLabel, StyledParagraphOne } from "../../styles/typograph";
 import { StyledButtonDefault } from "../../styles/buttons";
 import {StyledForm} from "./style.js"
@@ -34,8 +34,8 @@ const Form = ({ setValueList }) => {
 
         <StyledLabel htmlFor="type">Tipo de valor</StyledLabel>
         <StyledSelect name="type" id="type" value={type} onChange={(e) => setType((e).target.value)}>
-          <option value="Entrada">Entrada</option>
-          <option value="Despesa">Despesa</option>
+          <StyledOptions value="Entrada">Entrada</StyledOptions>
+          <StyledOptions value="Despesa">Despesa</StyledOptions>
         </StyledSelect>
 
         <StyledButtonDefault type="submit">Inserir valor</StyledButtonDefault>
